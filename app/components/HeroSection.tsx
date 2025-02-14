@@ -12,8 +12,6 @@ interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
     gradient: string
   }
   description?: string
-  ctaText?: string
-  ctaHref?: string
   gridOptions?: {
     angle?: number
     cellSize?: number
@@ -64,8 +62,6 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         gradient: "Knowledge",
       },
       description = "Discover a world of learning opportunities with our comprehensive educational platform. Join us to enhance your skills and unlock your potential.",
-      ctaText = "Get Started",
-      ctaHref = "#",
       gridOptions,
       ...props
     },
