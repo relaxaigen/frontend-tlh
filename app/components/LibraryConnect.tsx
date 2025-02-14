@@ -1,28 +1,53 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { motion, useAnimate, useInView } from "framer-motion";
+import * as React from "react";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
+import { useAnimate } from "framer-motion";
 import { HighlighterItem, HighlightGroup, Particles } from "./ui/highlighter";
-import { Library, Users } from 'lucide-react';
+import { ChevronRight, BookOpen, Library, GraduationCap, Users } from 'lucide-react';
 
 export function LibraryConnect() {
   const [scope, animate] = useAnimate();
-  const isInView = useInView(scope);
 
-  useEffect(() => {
-    if (isInView) {
-      animate(
+  React.useEffect(() => {
+    animate(
+      [
+        ["#pointer", { left: 200, top: 60 }, { duration: 0 }],
+        ["#books", { opacity: 1 }, { duration: 0.3 }],
         [
-          ["#pointer", { left: 200, top: 60 }, { duration: 0 }],
-          ["#pointer", { left: 400, top: 60 }, { duration: 2 }],
-          ["#pointer", { left: 200, top: 60 }, { duration: 2 }],
+          "#pointer",
+          { left: 50, top: 102 },
+          { at: "+0.5", duration: 0.5, ease: "easeInOut" },
         ],
-        {
-          repeat: Infinity,
-        }
-      );
-    }
-  }, [isInView, animate]);
+        ["#books", { opacity: 0.4 }, { at: "-0.3", duration: 0.1 }],
+        ["#research", { opacity: 1 }, { duration: 0.3 }],
+        [
+          "#pointer",
+          { left: 224, top: 170 },
+          { at: "+0.5", duration: 0.5, ease: "easeInOut" },
+        ],
+        ["#research", { opacity: 0.4 }, { at: "-0.3", duration: 0.1 }],
+        ["#academic", { opacity: 1 }, { duration: 0.3 }],
+        [
+          "#pointer",
+          { left: 88, top: 198 },
+          { at: "+0.5", duration: 0.5, ease: "easeInOut" },
+        ],
+        ["#academic", { opacity: 0.4 }, { at: "-0.3", duration: 0.1 }],
+        ["#community", { opacity: 1 }, { duration: 0.3 }],
+        [
+          "#pointer",
+          { left: 200, top: 60 },
+          { at: "+0.5", duration: 0.5, ease: "easeInOut" },
+        ],
+        ["#community", { opacity: 0.5 }, { at: "-0.3", duration: 0.1 }],
+      ],
+      {
+        repeat: Number.POSITIVE_INFINITY,
+      },
+    );
+  }, [animate]);
 
   return (
     <section className="relative mx-auto mb-20 mt-6 max-w-5xl">
