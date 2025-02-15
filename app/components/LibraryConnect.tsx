@@ -58,11 +58,11 @@ export function LibraryConnect() {
             <div className="relative z-20 h-full overflow-hidden rounded-3xl border border-slate-200 bg-white dark:border-slate-800 dark:bg-black">
               <Particles
                 className="absolute inset-0 -z-10 opacity-20 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
-                quantity={1000}
+                quantity={100}
                 color={"#84cc16"}
-                staticity={50}
-                ease={50}
-                vy={-0.2}
+                staticity={150}
+                ease={200}
+                vy={-0.005}
               />
               <div className="flex justify-center">
                 <div className="flex h-full flex-col justify-center gap-10 p-4 md:h-[300px] md:flex-row">

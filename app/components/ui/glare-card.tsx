@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { useRef, CSSProperties } from "react";
+import React from "react";
 
 type CustomCSSProperties = CSSProperties & {
   "--m-x": string;
@@ -27,6 +28,7 @@ export const GlareCard = ({
 }) => {
   const isPointerInside = useRef(false);
   const refElement = useRef<HTMLDivElement>(null);
+  const animationFrame = useRef<number | null>(null);
   const state = useRef({
     glare: {
       x: 50,
@@ -71,65 +73,84 @@ export const GlareCard = ({
 
   const updateStyles = () => {
     if (refElement.current) {
-      console.log(state.current);
       const { background, rotate, glare } = state.current;
-      refElement.current?.style.setProperty("--m-x", `${glare.x}%`);
-      refElement.current?.style.setProperty("--m-y", `${glare.y}%`);
-      refElement.current?.style.setProperty("--r-x", `${rotate.x}deg`);
-      refElement.current?.style.setProperty("--r-y", `${rotate.y}deg`);
-      refElement.current?.style.setProperty("--bg-x", `${background.x}%`);
-      refElement.current?.style.setProperty("--bg-y", `${background.y}%`);
+      refElement.current.style.setProperty("--m-x", `${glare.x}%`);
+      refElement.current.style.setProperty("--m-y", `${glare.y}%`);
+      refElement.current.style.setProperty("--r-x", `${rotate.x}deg`);
+      refElement.current.style.setProperty("--r-y", `${rotate.y}deg`);
+      refElement.current.style.setProperty("--bg-x", `${background.x}%`);
+      refElement.current.style.setProperty("--bg-y", `${background.y}%`);
     }
   };
+
+  const handlePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (!isPointerInside.current) return;
+
+    const rotateFactor = 0.4;
+    const rect = event.currentTarget.getBoundingClientRect();
+    const position = {
+      x: event.clientX - rect.left,
+      y: event.clientY - rect.top,
+    };
+    const percentage = {
+      x: (100 / rect.width) * position.x,
+      y: (100 / rect.height) * position.y,
+    };
+    const delta = {
+      x: percentage.x - 50,
+      y: percentage.y - 50,
+    };
+
+    const { background, rotate, glare } = state.current;
+    background.x = 50 + percentage.x / 4 - 12.5;
+    background.y = 50 + percentage.y / 3 - 16.67;
+    rotate.x = -(delta.x / 3.5) * rotateFactor;
+    rotate.y = delta.y / 2 * rotateFactor;
+    glare.x = percentage.x;
+    glare.y = percentage.y;
+
+    // Cancel any existing animation frame
+    if (animationFrame.current !== null) {
+      cancelAnimationFrame(animationFrame.current);
+    }
+    // Schedule the next update
+    animationFrame.current = requestAnimationFrame(updateStyles);
+  };
+
+  // Cleanup animation frame on unmount
+  React.useEffect(() => {
+    return () => {
+      if (animationFrame.current !== null) {
+        cancelAnimationFrame(animationFrame.current);
+      }
+    };
+  }, []);
+
   return (
     <div
       style={containerStyle}
       className="relative isolate [contain:layout_style] [perspective:600px] transition-transform duration-[var(--duration)] ease-[var(--easing)] delay-[var(--delay)] will-change-transform w-[320px] [aspect-ratio:17/21]"
       ref={refElement}
-      onPointerMove={(event) => {
-        const rotateFactor = 0.4;
-        const rect = event.currentTarget.getBoundingClientRect();
-        const position = {
-          x: event.clientX - rect.left,
-          y: event.clientY - rect.top,
-        };
-        const percentage = {
-          x: (100 / rect.width) * position.x,
-          y: (100 / rect.height) * position.y,
-        };
-        const delta = {
-          x: percentage.x - 50,
-          y: percentage.y - 50,
-        };
-
-        const { background, rotate, glare } = state.current;
-        background.x = 50 + percentage.x / 4 - 12.5;
-        background.y = 50 + percentage.y / 3 - 16.67;
-        rotate.x = -(delta.x / 3.5);
-        rotate.y = delta.y / 2;
-        rotate.x *= rotateFactor;
-        rotate.y *= rotateFactor;
-        glare.x = percentage.x;
-        glare.y = percentage.y;
-
-        updateStyles();
-      }}
+      onPointerMove={handlePointerMove}
       onPointerEnter={() => {
         isPointerInside.current = true;
         if (refElement.current) {
-          setTimeout(() => {
-            if (isPointerInside.current) {
-              refElement.current?.style.setProperty("--duration", "0s");
-            }
-          }, 300);
+          refElement.current.style.setProperty("--duration", "0s");
         }
       }}
       onPointerLeave={() => {
         isPointerInside.current = false;
         if (refElement.current) {
-          refElement.current.style.removeProperty("--duration");
-          refElement.current?.style.setProperty("--r-x", `0deg`);
-          refElement.current?.style.setProperty("--r-y", `0deg`);
+          refElement.current.style.setProperty("--duration", "300ms");
+          state.current = {
+            glare: { x: 50, y: 50 },
+            background: { x: 50, y: 50 },
+            rotate: { x: 0, y: 0 }
+          };
+          if (animationFrame.current !== null) {
+            cancelAnimationFrame(animationFrame.current);
+          }
+          animationFrame.current = requestAnimationFrame(updateStyles);
         }
       }}
     >
