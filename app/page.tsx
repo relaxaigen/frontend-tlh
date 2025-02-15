@@ -14,8 +14,6 @@ export default function Home() {
           gradient: "Knowledge",
         }}
         description="Discover a world of learning opportunities with our comprehensive library platform. Access thousands of books, journals, and academic resources."
-        ctaText="Get Started"
-        ctaHref="/signup"
         gridOptions={{
           angle: 65,
           opacity: 0.2,

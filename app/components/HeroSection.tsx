@@ -12,8 +12,6 @@ interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
     gradient: string
   }
   description?: string
-  ctaText?: string
-  ctaHref?: string
   gridOptions?: {
     angle?: number
     cellSize?: number
@@ -64,15 +62,13 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
         gradient: "Knowledge",
       },
       description = "Discover a world of learning opportunities with our comprehensive educational platform. Join us to enhance your skills and unlock your potential.",
-      ctaText = "Get Started",
-      ctaHref = "#",
       gridOptions,
-      ...props
+      ...rest
     },
     ref,
   ) => {
     return (
-      <div className={cn("relative min-h-screen bg-gradient-to-b from-gray-50 via-white to-white overflow-hidden", className)} ref={ref} {...props}>
+      <div className={cn("relative min-h-screen bg-gradient-to-b from-gray-50 via-white to-white overflow-hidden", className)} ref={ref} {...rest}>
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(70%_70%_at_50%_100%,rgba(56,189,248,0.13),rgba(59,130,246,0.05),transparent)]" />
           <div className="absolute inset-0 bg-[radial-gradient(50%_50%_at_50%_0%,rgba(56,189,248,0.13),rgba(59,130,246,0.05),transparent)]" />

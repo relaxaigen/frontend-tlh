@@ -1,7 +1,7 @@
 "use client";
 
 import { GlareCard } from "./ui/glare-card";
-import { Building2, GraduationCap, Brain } from "lucide-react";
+import { Building2, Brain, BookOpenCheck } from "lucide-react";
 
 export function GlareDemo() {
   return (
@@ -17,27 +17,27 @@ export function GlareDemo() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-          <GlareCard className="flex flex-col items-center justify-center">
+          <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
+            <BookOpenCheck className="h-14 w-14 text-white mb-4" />
+            <p className="font-bold text-white text-lg">Co-Study Spaces</p>
+            <p className="font-normal text-base text-neutral-200 mt-4">
+              Transform your learning experience in our peaceful and well-equipped co-study centers designed for focused studying.
+            </p>
+          </GlareCard>
+          
+          <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
             <Building2 className="h-14 w-14 text-white mb-4" />
-            <h3 className="text-white text-lg font-bold">Co-Study Spaces</h3>
-            <p className="text-neutral-200 text-sm mt-2 text-center px-4">
-              Transform unused rooms into peaceful study environments
+            <p className="font-bold text-white text-lg">Space Utilization</p>
+            <p className="font-normal text-base text-neutral-200 mt-4">
+              Landlords can convert their unused spaces into profitable co-study centers, maximizing property value.
             </p>
           </GlareCard>
           
-          <GlareCard className="flex flex-col items-center justify-center">
-            <GraduationCap className="h-14 w-14 text-white mb-4" />
-            <h3 className="text-white text-lg font-bold">Study Materials</h3>
-            <p className="text-neutral-200 text-sm mt-2 text-center px-4">
-              Access comprehensive learning resources and materials
-            </p>
-          </GlareCard>
-          
-          <GlareCard className="flex flex-col items-center justify-center">
+          <GlareCard className="flex flex-col items-start justify-end py-8 px-6">
             <Brain className="h-14 w-14 text-white mb-4" />
-            <h3 className="text-white text-lg font-bold">AI Integration</h3>
-            <p className="text-neutral-200 text-sm mt-2 text-center px-4">
-              Experience personalized learning with AI technology
+            <p className="font-bold text-white text-lg">AI-Powered Learning</p>
+            <p className="font-normal text-base text-neutral-200 mt-4">
+              Experience personalized learning with our advanced AI technology that adapts to your study patterns.
             </p>
           </GlareCard>
         </div>

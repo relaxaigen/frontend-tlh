@@ -1,11 +1,9 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
-import { cn } from "@/lib/utils";
 import { useAnimate } from "framer-motion";
 import { HighlighterItem, HighlightGroup, Particles } from "./ui/highlighter";
-import { ChevronRight, BookOpen, Library, GraduationCap, Users } from 'lucide-react';
+import { Library } from 'lucide-react';
 
 export function LibraryConnect() {
   const [scope, animate] = useAnimate();
@@ -62,9 +60,9 @@ export function LibraryConnect() {
                 className="absolute inset-0 -z-10 opacity-20 transition-opacity duration-1000 ease-in-out group-hover/item:opacity-100"
                 quantity={1000}
                 color={"#84cc16"}
-                staticity={30}
-                ease={30}
-                vy={-0.5}
+                staticity={50}
+                ease={50}
+                vy={-0.2}
               />
               <div className="flex justify-center">
                 <div className="flex h-full flex-col justify-center gap-10 p-4 md:h-[300px] md:flex-row">
