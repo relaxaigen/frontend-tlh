@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "The Learning HUB",
+  title: "The Learning Hub",
   description: "Your gateway to knowledge and learning resources",
 };
 
