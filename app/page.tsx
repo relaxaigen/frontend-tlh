@@ -8,12 +8,12 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       <HeroSection
-        title="Welcome to The Learning HUB"
+        title="Welcome to The Learning Hub"
         subtitle={{
-          regular: "Your Gateway to ",
-          gradient: "Knowledge",
+          regular: "Physical Space, ",
+          gradient: "Digital Learning",
         }}
-        description="Discover a world of learning opportunities with our comprehensive library platform. Access thousands of books, journals, and academic resources."
+        description="Utilise your empty space and transform into Learning Hub"
         gridOptions={{
           angle: 65,
           opacity: 0.2,
