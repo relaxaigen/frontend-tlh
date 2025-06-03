@@ -5,7 +5,6 @@ import {
   Building2, 
   LayoutGrid, 
   BookOpenCheck, 
-  GraduationCap, 
   Brain,
   Users,
   Calendar,
@@ -13,8 +12,7 @@ import {
   Smartphone,
   BarChart,
   MessageSquare,
-  Clock,
-  Zap
+  Clock
 } from "lucide-react";
 
 const features = [

@@ -233,7 +233,7 @@ export default function AboutPage() {
                 transition={{ delay: index * 0.2 }}
               >
                 <Quote className="h-8 w-8 text-lime-600 mb-4" />
-                <p className="text-slate-600 mb-6 italic">"{testimonial.quote}"</p>
+                <p className="text-slate-600 mb-6 italic">&quot;{testimonial.quote}&quot;</p>
                 <div>
                   <p className="font-bold">{testimonial.author}</p>
                   <p className="text-slate-500">{testimonial.role}</p>
