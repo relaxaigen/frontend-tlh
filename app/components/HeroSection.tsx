@@ -3,7 +3,7 @@ import * as React from "react"
 import { cn } from "@/lib/utils"
 import { ChevronRight } from "lucide-react"
 import SearchBar from "./SearchBar"
-import { LibraryConnect } from './LibraryConnect';
+import { GlareDemo } from './GlareDemo';
 
 interface HeroSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string
@@ -68,7 +68,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
     ref,
   ) => {
     return (
-      <div className={cn("relative min-h-screen bg-gradient-to-b from-gray-50 via-white to-white overflow-hidden", className)} ref={ref} {...rest}>
+      <div className={cn("relative min-h-screen bg-gradient-to-b from-gray-50 via-white to-slate-100 overflow-hidden", className)} ref={ref} {...rest}>
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[radial-gradient(70%_70%_at_50%_100%,rgba(56,189,248,0.13),rgba(59,130,246,0.05),transparent)]" />
           <div className="absolute inset-0 bg-[radial-gradient(50%_50%_at_50%_0%,rgba(56,189,248,0.13),rgba(59,130,246,0.05),transparent)]" />
@@ -109,7 +109,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             </div>
           </div>
         </section>
-        <LibraryConnect />
+        <GlareDemo />
       </div>
     )
   },

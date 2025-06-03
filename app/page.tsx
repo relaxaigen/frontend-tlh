@@ -1,7 +1,7 @@
 import { HeroSection } from "./components/HeroSection";
 import { AboutSection } from "./components/AboutSection";
 import { BentoFeatures } from "./components/BentoFeatures";
-import { GlareDemo } from "./components/GlareDemo";
+import { LibraryConnect } from "./components/LibraryConnect";
 import { Footer } from "./components/Footer";
 
 export default function Home() {
@@ -24,7 +24,7 @@ export default function Home() {
       />
       <AboutSection />
       <BentoFeatures />
-      <GlareDemo />
+      <LibraryConnect />
       <Footer />
     </main>
   )
