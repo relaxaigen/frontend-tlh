@@ -6,9 +6,7 @@ import {
   Target, 
   Lightbulb, 
   Heart, 
-  Users, 
   Award, 
-  Star,
   Quote
 } from "lucide-react";
 
