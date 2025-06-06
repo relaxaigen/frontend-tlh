@@ -23,19 +23,6 @@ const SearchBar = () => {
               Search
             </button>
           </div>
-          <div className="px-4 py-2 border-t border-gray-100">
-            <div className="flex items-center gap-2 text-sm">
-              <span className="text-gray-500">Nearby:</span>
-              {['City Central Library', 'University Library', 'Community Library', 'Public Library'].map((tag) => (
-                <button
-                  key={tag}
-                  className="px-3 py-1 text-blue-700 hover:bg-blue-50 rounded-full transition-colors"
-                >
-                  {tag}
-                </button>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
     </motion.div>
