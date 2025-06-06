@@ -27,7 +27,7 @@ export function Footer() {
     },
     {
       icon: MapPin,
-      text: "123 Learning Street, Education City, IN 400001",
+      text: "GT Road, Gopiganj, Bhadohi",
       href: "https://maps.google.com",
     },
   ];
@@ -51,7 +51,7 @@ export function Footer() {
               </div>
               <div>
                 <h3 className="text-xl font-bold">The Learning Hub</h3>
-                <p className="text-sm text-slate-400">Empowering Education</p>
+                <p className="text-sm text-slate-400">Physical Space, Digital Learning</p>
               </div>
             </div>
             <p className="text-slate-400 text-sm leading-relaxed">
