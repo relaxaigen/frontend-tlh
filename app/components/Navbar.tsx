@@ -70,9 +70,7 @@ const Navbar = () => {
                 className="w-auto h-12"
               />
             </motion.div>
-            <span className="text-blue-700 font-bold text-lg">
-              The Learning HUB
-            </span>
+            <span className="text-blue-700 font-bold text-lg">The Learning Hub</span>
             <div className="hidden md:block">
               <div className="ml-10 flex items-center space-x-4">
                 <NavLink href="/">Home</NavLink>

@@ -85,6 +85,15 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
               <p className="max-w-2xl mx-auto text-gray-600 text-lg">
                 {description}
               </p>
+              <h2 className="text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl text-center">
+                <span className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 bg-clip-text text-transparent">
+                  {subtitle.regular}
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 bg-clip-text text-transparent">
+                  {subtitle.gradient}
+                </span>
+              </h2>
               <div className="items-center justify-center gap-x-3 space-y-3 sm:flex sm:space-y-0 mt-8">
                 <span className="relative inline-block overflow-hidden rounded-full p-[1.5px]">
                   <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#1e40af_0%,#1d4ed8_50%,#1e40af_100%)]" />
@@ -100,12 +109,6 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                   </div>
                 </span>
               </div>
-              <h2 className="text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl mt-8">
-                <span className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 bg-clip-text text-transparent">
-                  {subtitle.regular}
-                  {subtitle.gradient}
-                </span>
-              </h2>
             </div>
           </div>
         </section>
