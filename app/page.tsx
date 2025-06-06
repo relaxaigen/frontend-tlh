@@ -10,7 +10,7 @@ export default function Home() {
       <HeroSection
         title="Welcome to The Learning Hub"
         subtitle={{
-          regular: "Physical Space, ",
+          regular: "Physical Space",
           gradient: "Digital Learning",
         }}
         description="Utilise your empty space and transform into Learning Hub"
