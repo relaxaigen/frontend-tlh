@@ -20,17 +20,17 @@ export function AboutSection() {
       icon: Users,
     },
     {
-      title: "Annual Chess Championship",
+      title: "🏆 Shree Jan Learning Hub Foundation",
       description:
-        "Join our prestigious chess tournament where minds battle it out for glory. With over 200+ participants yearly, our chess championship has become a hallmark event fostering strategic thinking and competitive spirit.",
+        "Join our mission to empower underprivileged children through education and community initiatives. With continuous efforts, the foundation has become a symbol of hope, learning, and growth — inspiring young minds and supporting brighter futures.",
       features: [
-        "₹50,000 Prize Pool",
-        "International Participants",
-        "Professional Arbitration",
+        "Free Education Support",
+        "Skill Development Programs",
+        "Community Events & Workshops"
       ],
-      image: "/about-2.jpg",
-      imagePosition: "right",
-      icon: Trophy,
+      image: "/about-2.jpg", // As confirmed by user
+      imagePosition: "right", // Keeping existing layout
+      icon: Trophy, // As confirmed by user
     },
     {
       title: "Our Achievements",
