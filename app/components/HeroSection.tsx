@@ -82,12 +82,6 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                 {title}
                 <ChevronRight className="inline w-4 h-4 ml-1 group-hover:translate-x-1 duration-300" />
               </h1>
-              <h2 className="text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl">
-                <span className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 bg-clip-text text-transparent">
-                  {subtitle.regular}
-                  {subtitle.gradient}
-                </span>
-              </h2>
               <p className="max-w-2xl mx-auto text-gray-600 text-lg">
                 {description}
               </p>
@@ -106,6 +100,12 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
                   </div>
                 </span>
               </div>
+              <h2 className="text-5xl font-bold tracking-tight md:text-6xl lg:text-7xl mt-8">
+                <span className="bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 bg-clip-text text-transparent">
+                  {subtitle.regular}
+                  {subtitle.gradient}
+                </span>
+              </h2>
             </div>
           </div>
         </section>
