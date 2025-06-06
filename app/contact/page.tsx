@@ -152,7 +152,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-medium text-slate-900">Address</h3>
                       <p className="text-slate-600">
-                        123 Learning Street, Education City, IN 400001
+                        GT Road, Gopiganj, Bhadohi
                       </p>
                     </div>
                   </div>
