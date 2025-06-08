@@ -20,7 +20,7 @@ export function AboutSection() {
       icon: Users,
     },
     {
-      title: "Shree Jan Learning Hub Foundation",
+      title: "SHREEJANLEARNINGHUB FOUNDATION",
       description:
         "Join our mission to empower underprivileged children through education and community initiatives. With continuous efforts, the foundation has become a symbol of hope, learning, and growth — inspiring young minds and supporting brighter futures.",
       features: [
