@@ -35,7 +35,7 @@ export function AboutSection() {
     {
       title: "Our Achievements",
       description:
-        "The Learning Hub has established itself as a center of excellence, nurturing talent and fostering innovation. Our commitment to quality education has earned us recognition across the academic landscape.",
+        "The Learning Hub actively promotes sports like chess and badminton, regularly hosting tournaments to encourage participation and healthy competition. Through these initiatives, we’re building a vibrant community that supports personal growth, teamwork, and local talent development.",
       features: [
         "Best Digital Library Award 2024",
         "100,000+ Student Success Stories",
