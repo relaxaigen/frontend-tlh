@@ -12,22 +12,16 @@ import {
 
 const teamMembers = [
   {
-    name: "Rachit Shah",
+    name: "Ankit Yadav",
     role: "Founder & CEO",
-    image: "/team/rachit.jpg",
+    image: "/t1.png",
     bio: "Passionate about transforming education through technology and innovation."
   },
   {
-    name: "Sarah Johnson",
+    name: "Prabhat Yadav",
     role: "Head of Operations",
-    image: "/team/sarah.jpg",
-    bio: "Expert in educational management with 10+ years of experience."
-  },
-  {
-    name: "Michael Chen",
-    role: "Tech Lead",
-    image: "/team/michael.jpg",
-    bio: "Full-stack developer focused on creating seamless learning experiences."
+    image: "/t2.png",
+    bio: "Expert in educational management with a focus on operational excellence."
   }
 ];
 
