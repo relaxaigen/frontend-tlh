@@ -127,7 +127,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-gradient-to-b from-slate-50 to-white">
+      <section className="py-20 bg-gradient-to-b from-slate-50 to-white px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-lime-600 bg-clip-text text-transparent">
@@ -138,7 +138,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="flex flex-wrap justify-center items-stretch gap-8 max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center items-stretch gap-12 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
@@ -148,7 +148,7 @@ export default function AboutPage() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.2 }}
               >
-                <div className="relative h-64">
+                <div className="relative h-96">
                   <Image
                     src={member.image}
                     alt={member.name}
