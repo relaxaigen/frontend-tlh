@@ -27,19 +27,19 @@ const teamMembers = [
 
 const milestones = [
   {
-    year: "2024",
-    title: "National Education Excellence Award",
-    description: "Recognized for innovative approach to digital learning"
+    year: "2022",
+    title: "Co-Study Space Launch",
+    description: "Initiated our journey by launching a collaborative co-study environment for students."
   },
   {
     year: "2023",
-    title: "100,000+ Students",
-    description: "Reached milestone of serving over 100,000 students"
+    title: "1,000+ Students",
+    description: "Reached the milestone of empowering over 1,000 students through quality learning support."
   },
   {
-    year: "2022",
-    title: "AI Integration",
-    description: "Launched AI-powered learning platform"
+    year: "2024",
+    title: "Expanded to 3 Branches",
+    description: "Successfully expanded operations by opening 3 new branches to serve more learners."
   }
 ];
 
