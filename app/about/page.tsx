@@ -138,11 +138,11 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div className="flex flex-wrap justify-center items-stretch gap-8 max-w-4xl mx-auto">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={index}
-                className="bg-white rounded-2xl shadow-lg overflow-hidden"
+                className="bg-white rounded-2xl shadow-lg overflow-hidden w-full max-w-sm flex flex-col"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -156,7 +156,7 @@ export default function AboutPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-grow">
                   <h3 className="text-xl font-bold mb-2">{member.name}</h3>
                   <p className="text-lime-600 mb-4">{member.role}</p>
                   <p className="text-slate-600">{member.bio}</p>
